@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  qed.encompass.api:
+    image: ${DOCKER_REGISTRY}qedencompassapi
+    build:
+      context: .
+      dockerfile: Qed.Encompass.Api\Dockerfile
+
+  qed.encompass.webapi:
+    image: ${DOCKER_REGISTRY}qedencompasswebapi
+    build:
+      context: .
+      dockerfile: ..\Qed.Encompass.WebApi\Dockerfile
+
+
+  qed.webhook.redundancy.webapi:
+    image: ${DOCKER_REGISTRY}qedwebhookredundancywebapi
+    build:
+      context: .
+      dockerfile: Qed.Webhook.Redundancy.WebApi/Dockerfile
+

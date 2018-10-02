@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configurations\DocumentWorkerConfiguration.cs" />
+    <Compile Remove="Interfaces\IDocumentWorkerConfiguration.cs" />
+    <Compile Remove="Interfaces\IEncompassClientConfiguration.cs" />
+    <Compile Remove="Models\Responses\Document\Attachment.cs" />
+    <Compile Remove="Models\Responses\Document\Document.cs" />
+    <Compile Remove="Services\DocumentService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qed.Webhook.Api.Repository\Qed.Webhook.Api.Repository.csproj" />
+    <ProjectReference Include="..\Qed.Webhook.Shared\Qed.Webhook.Api.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

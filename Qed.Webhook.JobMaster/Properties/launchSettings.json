@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Qed.JobPicker.Worker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
